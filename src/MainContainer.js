@@ -1,6 +1,7 @@
 import React from 'react';
-import Navbar from './Navbar';
+import NavBar from './NavBar';
 import SideBar from './SideBar';
+import ProjectsPanel from './ProjectsPanel';
 /** 
  *  MainContainer (Component)
  *      Wraps everything that a page needs into it's own component
@@ -15,8 +16,8 @@ class MainContainer extends React.Component {
                     <div className="row">
                         <SideBar highlight={this.props.sidebar}/> 
                         <div className=" col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-                            //  reference to any "children" here
                             {this.props.children}
+                            <ProjectsPanel />
                         </div>
                     </div>
                 </div>
