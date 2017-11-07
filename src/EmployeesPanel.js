@@ -1,19 +1,19 @@
 import React from 'react';
 import axios from 'axios';
 
-class TeamsPanel extends React.Component {
+class EmployeesPanel extends React.Component {
     constructor(props) {
         super(props);
         this.dataSource = this.props.dataSource;
         this.state = {
-            teams: []
+            employees: []
         }
     }
 
     componentDidMount() {
-        axios.get("https://glacial-cove-51366.herokuapp.com/teams").then((res) => {
+        axios.get("https://glacial-cove-51366.herokuapp.com/employees").then((res) => {
             this.setState({
-                teams: res.data,
+                employees: res.data,
                 dataLoaded: true
             });
         }).catch((err) => {
@@ -26,33 +26,33 @@ class TeamsPanel extends React.Component {
         return (
                 <div className="panel panel-default">
                     <div className="panel-heading">
-                        <h3 className="panel-title">Teams</h3>
+                        <h3 className="panel-title">Employees</h3>
                     </div>
                     <div className="panel-body">
                         <div className="table-responsive overview-table">
                             <table className="table table-striped table-bordered">
                                 <thead>
                                     <tr>
-                                        <th>Team 1</th>
-                                        <th># Employees</th>
+                                    <th>Employee Name</th>
+                                    <th>Position Name</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {this.state.teams.map((element, index) => {
-                                       return (
+                                    {this.state.employees.map((element, index) => {
+                                        return (
                                                 <tr>
-                                                    <td>{element.TeamName}</td>
-                                                    <td>{element.Employees.length}</td>
+                                                    <td>{element.FirstName} {element.LastName}</td>
+                                                    <td>{element.Position.PositionName}</td>
                                                 </tr>
                                         )
                                     })}
                                 </tbody>
                             </table>
                         </div>
-                        <a href="/teams" className="btn btn-primary form-control">View All Team Data</a>
+                        <a href="/employees" className="btn btn-primary form-control">View All Employee Data</a>
                     </div>
                 </div>
         )
     }
 };
-export default TeamsPanel;
+export default EmployeesPanel;
