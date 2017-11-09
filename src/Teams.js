@@ -39,21 +39,16 @@ class Teams extends React.Component {
                     </thead>
                     <tbody>
                         {this.state.teams.map((element, index) => {
-
-                            function projectList(projects){
-                                let list = '';
-                                for (var i = 0; i < projects.length; i++ ) {
-                                    list += '<li>' + projects[i].ProjectName + '</li>';
-                                }
-                                return list;
-                            }
-
                             return (
                                 <tr>
                                     <td>{element.TeamName}</td>
                                     <td>
                                         <ul>
-                                        {projectList(element.Projects)}
+                                        {element.Projects.map((element, index) => {
+                                            return (
+                                                <li>{element.ProjectName}</li>
+                                            )
+                                        })}
                                         </ul>
                                     </td>
                                     <td>{element.Employees.length}</td>

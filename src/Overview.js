@@ -3,8 +3,6 @@ import MainContainer from './MainContainer';
 import ProjectsPanel from './ProjectsPanel';
 import TeamsPanel from './TeamsPanel';
 import EmployeesPanel from './EmployeesPanel'; 
-import Projects from './Projects'; 
-import Teams from './Teams'; 
 
 class Overview extends React.Component {
     render(){
@@ -22,8 +20,7 @@ class Overview extends React.Component {
                     <EmployeesPanel />
                     </div>
                 </div>
-                <Projects />
-                <Teams />
+                
             </MainContainer>
             );
     }

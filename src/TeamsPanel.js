@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
 
 class TeamsPanel extends React.Component {
     constructor(props) {
@@ -49,7 +50,7 @@ class TeamsPanel extends React.Component {
                                 </tbody>
                             </table>
                         </div>
-                        <a href="/teams" className="btn btn-primary form-control">View All Team Data</a>
+                        <Link to="/teams" className="btn btn-primary form-control">View All Team Data</Link>
                     </div>
                 </div>
         )
