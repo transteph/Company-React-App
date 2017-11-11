@@ -9,7 +9,7 @@ class Overview extends React.Component {
         return(
             <MainContainer sidebar="Overview">
                 <h1 className="page-header">Overview</h1>
-                    <div className="row">
+                 <div className="row">
                     <div className="col-md-4">
                     <ProjectsPanel />
                     </div>
