@@ -28,7 +28,7 @@ class NotFound extends React.Component {
         return (
             <MainContainer>
                 <h1 className="page-header">Not Found</h1>
-                <span>Page Not Found <span role="img">🤔</span></span>
+                Page Not Found <span role="img" aria-label="Confused face">🤔</span>
             </MainContainer>
         );
     }
