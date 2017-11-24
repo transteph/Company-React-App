@@ -11,7 +11,7 @@ class MainContainer extends React.Component {
         return(
             <div>
                 <NavBar highlight={this.props.sidebar}/>
-                <div className="container-fluid">
+                <div className="container-fluid container">
                     <div className="row">
                         <div className="main">
                             {this.props.children}
