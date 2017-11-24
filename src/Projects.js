@@ -35,26 +35,16 @@ class Projects extends React.Component {
                             <th>Name</th>
                             <th>Description</th>
                             <th>Start Date</th>
-                            <th>End Date</th>
                         </tr>
                     </thead>
                     <tbody>
                         {this.state.projects.map((element, index) => {
-                            function findEndDate (endDate){
-                                if (endDate === "null" || endDate == null )
-                                    return 'n/a';
-                                else
-                                    return endDate;
-                            };
 
                             return (
                                 <tr>
                                     <td>{element.ProjectName}</td>
                                     <td>{element.ProjectDescription}</td>
                                     <td>{ moment(element.ProjectStartDate).format('LL') }</td>
-                                    <td>{
-                                        findEndDate(element.ProjectEndDate)
-                                        }</td>
                                 </tr>
                             )
                         })}

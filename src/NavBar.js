@@ -8,7 +8,7 @@ class NavBar extends React.Component {
             <Navbar className="fixedTop">
                 <Navbar.Header>
                     <Navbar.Brand>
-                        <Link to="/">Overview <span className="sr-only">(current)</span></Link>
+                        <Link to="/">Our Company <span className="sr-only">(current)</span></Link>
                     </Navbar.Brand>
                     <Navbar.Toggle>
 
